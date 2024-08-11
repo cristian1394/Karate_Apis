@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Aug 09 11:28:11 COT 2024","Fri Aug 09 11:29:19 COT 2024","68016","","users.ManagementTest","","users.ManagementTest","testParallel","testParallel()",""

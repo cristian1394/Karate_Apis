@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="users.KarateTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-10T23:07:07" hostname="PE-HO-ACH-014" time="4.57">
+  <properties/>
+  <testcase name="testParallel()" classname="users.KarateTest" time="4.57"/>
+  <system-out><![CDATA[18:07:07.982 [Test worker] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:07:07.989 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1723331227988
+18:07:09.177 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/signup
+1 > Accept: */*
+1 > Accept-Encoding: gzip, deflate, br, zstd
+1 > Accept-Language:: es-419,es;q=0.9
+1 > Access-Control-Request-Headers:: content-type
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 61
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{"username":"Usuario_1723331228967","password":"password123"}
+
+18:07:09.177 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/signup
+1 > Accept: */*
+1 > Accept-Encoding: gzip, deflate, br, zstd
+1 > Accept-Language:: es-419,es;q=0.9
+1 > Access-Control-Request-Headers:: content-type
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 43
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{"username":"Prueba","password":"PruebaQa"}
+
+18:07:09.635 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 458
+1 < 200
+1 < Content-Type: application/json
+1 < X-Cloud-Trace-Context: 3c600dfc8eed43d519ab1fa683b0b098
+1 < Date: Sat, 10 Aug 2024 23:07:08 GMT
+1 < Server: Google Frontend
+1 < Content-Length: 3
+""
+
+
+18:07:09.642 [pool-1-thread-1] INFO  com.intuit.karate - [print] ""
+ 
+18:07:09.655 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 477
+1 < 200
+1 < Content-Type: application/json
+1 < Vary: Accept-Encoding
+1 < X-Cloud-Trace-Context: a8d7e446a3dca2a405c4d5ffda4a6e42
+1 < Date: Sat, 10 Aug 2024 23:07:08 GMT
+1 < Server: Google Frontend
+1 < Cache-Control: private
+1 < Transfer-Encoding: chunked
+{"errorMessage":"This user already exist."}
+
+
+18:07:09.668 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Accept: */*
+1 > Accept-Encoding: gzip, deflate, br, zstd
+1 > Accept-Language:: es-419,es;q=0.9
+1 > Access-Control-Request-Headers:: content-type
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 52
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{"username":"Prueba","password":"#(variableRandom)"}
+
+18:07:09.677 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.demoblaze.com/login
+1 > Accept: */*
+1 > Accept-Encoding: gzip, deflate, br, zstd
+1 > Accept-Language: es-419,es;q=0.9
+1 > Access-Control-Request-Headers: content-type
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 50
+1 > Host: api.demoblaze.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{"username":"pruebasQA","password":"cHJ1ZWJhMTIz"}
+
+18:07:09.985 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 317
+1 < 200
+1 < Content-Type: application/json
+1 < Vary: Accept-Encoding
+1 < X-Cloud-Trace-Context: 85b2e7afaf5eb774cee30023c0570fad
+1 < Date: Sat, 10 Aug 2024 23:07:09 GMT
+1 < Server: Google Frontend
+1 < Cache-Control: private
+1 < Transfer-Encoding: chunked
+{"errorMessage":"Wrong password."}
+
+
+18:07:10.013 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 336
+1 < 200
+1 < Content-Type: application/json
+1 < Vary: Accept-Encoding
+1 < X-Cloud-Trace-Context: 2bdbbef2b3275bd62b04bba129d4ae1c
+1 < Date: Sat, 10 Aug 2024 23:07:09 GMT
+1 < Server: Google Frontend
+1 < Cache-Control: private
+1 < Transfer-Encoding: chunked
+"Auth_token: cHJ1ZWJhc1FBMTcyMzkzMQ=="
+
+
+18:07:10.015 [pool-1-thread-2] INFO  com.intuit.karate - [print] "Auth_token: cHJ1ZWJhc1FBMTcyMzkzMQ=="
+ 
+---------------------------------------------------------
+feature: classpath:users/BlazeDemo/BlazeDemo.feature
+scenarios:  4 | passed:  4 | failed:  0 | time: 2,0904
+---------------------------------------------------------
+
+18:07:10.716 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:users/BlazeDemo/BlazeDemo.feature
+Karate version: 1.2.0.RC4
+======================================================
+elapsed:   3,57 | threads:    2 | thread time: 2,09 
+features:     1 | skipped:    0 | efficiency: 0,29
+scenarios:    4 | passed:     4 | failed: 0
+======================================================
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC4
+file:///C:/Users/cristianramos/eclipse-workspace/Karate/Prueba_Karate/build/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  <system-err><![CDATA[ago. 10, 2024 6:07:11 P. M. net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\cristianramos\eclipse-workspace\Karate\Prueba_Karate\build\karate-reports\users.BlazeDemo.BlazeDemo.json' contains 1 features
+]]></system-err>
+</testsuite>

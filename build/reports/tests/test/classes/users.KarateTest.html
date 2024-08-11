@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - KarateTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>KarateTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/users.html">users</a> &gt; KarateTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.570s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testParallel()</td>
+<td class="success">4.570s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>18:07:07.982 [Test worker] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:07:07.989 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1723331227988
+18:07:09.177 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 &gt; POST https://api.demoblaze.com/signup
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br, zstd
+1 &gt; Accept-Language:: es-419,es;q=0.9
+1 &gt; Access-Control-Request-Headers:: content-type
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 61
+1 &gt; Host: api.demoblaze.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{&quot;username&quot;:&quot;Usuario_1723331228967&quot;,&quot;password&quot;:&quot;password123&quot;}
+
+18:07:09.177 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; POST https://api.demoblaze.com/signup
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br, zstd
+1 &gt; Accept-Language:: es-419,es;q=0.9
+1 &gt; Access-Control-Request-Headers:: content-type
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 43
+1 &gt; Host: api.demoblaze.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{&quot;username&quot;:&quot;Prueba&quot;,&quot;password&quot;:&quot;PruebaQa&quot;}
+
+18:07:09.635 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 458
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; X-Cloud-Trace-Context: 3c600dfc8eed43d519ab1fa683b0b098
+1 &lt; Date: Sat, 10 Aug 2024 23:07:08 GMT
+1 &lt; Server: Google Frontend
+1 &lt; Content-Length: 3
+&quot;&quot;
+
+
+18:07:09.642 [pool-1-thread-1] INFO  com.intuit.karate - [print] &quot;&quot;
+ 
+18:07:09.655 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 477
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Cloud-Trace-Context: a8d7e446a3dca2a405c4d5ffda4a6e42
+1 &lt; Date: Sat, 10 Aug 2024 23:07:08 GMT
+1 &lt; Server: Google Frontend
+1 &lt; Cache-Control: private
+1 &lt; Transfer-Encoding: chunked
+{&quot;errorMessage&quot;:&quot;This user already exist.&quot;}
+
+
+18:07:09.668 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 &gt; POST https://api.demoblaze.com/login
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br, zstd
+1 &gt; Accept-Language:: es-419,es;q=0.9
+1 &gt; Access-Control-Request-Headers:: content-type
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 52
+1 &gt; Host: api.demoblaze.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{&quot;username&quot;:&quot;Prueba&quot;,&quot;password&quot;:&quot;#(variableRandom)&quot;}
+
+18:07:09.677 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; POST https://api.demoblaze.com/login
+1 &gt; Accept: */*
+1 &gt; Accept-Encoding: gzip, deflate, br, zstd
+1 &gt; Accept-Language: es-419,es;q=0.9
+1 &gt; Access-Control-Request-Headers: content-type
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 50
+1 &gt; Host: api.demoblaze.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+{&quot;username&quot;:&quot;pruebasQA&quot;,&quot;password&quot;:&quot;cHJ1ZWJhMTIz&quot;}
+
+18:07:09.985 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 317
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Cloud-Trace-Context: 85b2e7afaf5eb774cee30023c0570fad
+1 &lt; Date: Sat, 10 Aug 2024 23:07:09 GMT
+1 &lt; Server: Google Frontend
+1 &lt; Cache-Control: private
+1 &lt; Transfer-Encoding: chunked
+{&quot;errorMessage&quot;:&quot;Wrong password.&quot;}
+
+
+18:07:10.013 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 336
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; Vary: Accept-Encoding
+1 &lt; X-Cloud-Trace-Context: 2bdbbef2b3275bd62b04bba129d4ae1c
+1 &lt; Date: Sat, 10 Aug 2024 23:07:09 GMT
+1 &lt; Server: Google Frontend
+1 &lt; Cache-Control: private
+1 &lt; Transfer-Encoding: chunked
+&quot;Auth_token: cHJ1ZWJhc1FBMTcyMzkzMQ==&quot;
+
+
+18:07:10.015 [pool-1-thread-2] INFO  com.intuit.karate - [print] &quot;Auth_token: cHJ1ZWJhc1FBMTcyMzkzMQ==&quot;
+ 
+---------------------------------------------------------
+feature: classpath:users/BlazeDemo/BlazeDemo.feature
+scenarios:  4 | passed:  4 | failed:  0 | time: 2,0904
+---------------------------------------------------------
+
+18:07:10.716 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;pass&gt;&gt; feature 1 of 1 (0 remaining) classpath:users/BlazeDemo/BlazeDemo.feature
+Karate version: 1.2.0.RC4
+======================================================
+elapsed:   3,57 | threads:    2 | thread time: 2,09 
+features:     1 | skipped:    0 | efficiency: 0,29
+scenarios:    4 | passed:     4 | failed: 0
+======================================================
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC4
+file:///C:/Users/cristianramos/eclipse-workspace/Karate/Prueba_Karate/build/karate-reports/karate-summary.html
+===================================================================
+
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>ago. 10, 2024 6:07:11 P. M. net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\cristianramos\eclipse-workspace\Karate\Prueba_Karate\build\karate-reports\users.BlazeDemo.BlazeDemo.json' contains 1 features
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.6</a> at 10/08/2024, 6:07:11 p. m.</p>
+</div>
+</div>
+</body>
+</html>
